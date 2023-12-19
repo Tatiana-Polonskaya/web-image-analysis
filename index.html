@@ -1,0 +1,36 @@
+<html>
+
+<head>    
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.7.0"> </script>    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>    
+</head>
+
+<body  class="container">
+    
+    <div id="container"  class="center-block">
+
+        
+
+        <h1>Предсказание цифры по рисунку </h1>
+        <h3>Нарисуйте цифру в центре квадрата</h3>
+             
+        <canvas id="canvas" width="386px" height="386px" class="canvas"
+            style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
+
+        <p>Ваша цифра: <span id="result"></span></p>
+
+        <div>        
+            <button type="button" class="btn" onclick="erase()">Очистить</button>    
+            <button type="button" class="btn" onclick="predictModel()">Предсказать</button>
+        </div>   
+
+        <p>Автор: <span class="author">Татьяна Полонская</span></p>
+
+            
+    </div>        
+    <script src="index.js"></script>
+</body>
+
+</html>

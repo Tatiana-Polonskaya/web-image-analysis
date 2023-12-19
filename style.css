@@ -1,0 +1,42 @@
+:root {
+  --main-bg-color: #1c1d38;
+  --main-text-color: white;
+}
+
+.container{
+	margin: auto auto;
+	background: var(--main-bg-color);
+	
+}
+
+.center-block{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+h1,h2,h3, p, div, .btn{
+	color:var(--main-text-color);
+}
+
+p{
+	padding-top: 30px;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.author{
+	font-style: italic;
+}
+
+.btn{
+	cursor: pointer;
+	background: var(--main-bg-color);
+	padding: 10px 15px;
+	border: 1px solid white;
+	border-radius: 8px;
+	font-size: 14px;
+	box-shadow: 2px 2px 5px 1px rgba(217, 217, 217, .2);
+}
