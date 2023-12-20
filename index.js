@@ -66,7 +66,7 @@ function erase() {
 }
 
 async function loadModel() {    
-    model = await tf.loadLayersModel('https://raw.githubusercontent.com/Tatiana-Polonskaya/web-image-analysis/main/mnst.json');
+    model = await tf.loadLayersModel('https://raw.githubusercontent.com/Tatiana-Polonskaya/mnst/main/mnst.json');
     
     model.predict(tf.zeros([1, 28, 28,1]))
     
