@@ -2,6 +2,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 var dragging = false;
 var pos = { x: 0, y: 0 };
+var result =  document.getElementById('result');
 
 canvas.addEventListener('mousedown', engage);
 canvas.addEventListener('mousedown', setPosition);
@@ -63,6 +64,7 @@ function draw(e) {
 }
 function erase() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    result.innerHTML = "";
 }
 
 async function loadModel() {    
@@ -86,7 +88,7 @@ async function predictModel() {
     image = tf.image.resizeBilinear(image, [28, 28]).sum(2).expandDims(0).expandDims(-1)    
     y = model.predict(image);
 
-    document.getElementById('result').innerHTML = y.argMax(1).dataSync();
+    result.innerHTML = y.argMax(1).dataSync();
 }
 
 var model = loadModel()
