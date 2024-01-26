@@ -6,7 +6,6 @@
 .container{
 	margin: auto auto;
 	background: var(--main-bg-color);
-	height: 100%;
 }
 
 .center-block{
